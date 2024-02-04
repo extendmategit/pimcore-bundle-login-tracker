@@ -1,0 +1,48 @@
+pimcore_custom_reports:
+    definitions:
+        ExtendmateLoginTracker-LoginAttemptByIpAddress:
+            name: ExtendmateLoginTracker-LoginAttemptByIpAddress
+            sql: ''
+            dataSourceConfig:
+                -
+                    sql: 'ipAddress, COUNT(*) AS ip_login_attempts'
+                    from: bundle_extendmate_login_tracker_login_attempts
+                    where: ''
+                    groupby: ipAddress
+                    type: sql
+            columnConfiguration:
+                -
+                    name: ipAddress
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'IP Address'
+                    filter: string
+                    id: extModel387-1
+                -
+                    name: ip_login_attempts
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Login Count'
+                    filter: numeric
+                    displayType: null
+                    id: extModel387-2
+            niceName: 'Login Attempts By IP Address'
+            group: 'Extendmate Login Tracker'
+            groupIconClass: ''
+            iconClass: ''
+            menuShortcut: true
+            reportClass: ''
+            chartType: ''
+            pieColumn: null
+            pieLabelColumn: null
+            xAxis: null
+            yAxis: {  }
+            modificationDate: 1701450823
+            creationDate: 1701449169
+            shareGlobally: true
+            sharedUserNames: {  }
+            sharedRoleNames: {  }

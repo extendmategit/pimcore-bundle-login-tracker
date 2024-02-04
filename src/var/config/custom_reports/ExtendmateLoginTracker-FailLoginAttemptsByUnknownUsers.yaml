@@ -1,0 +1,74 @@
+pimcore_custom_reports:
+    definitions:
+        ExtendmateLoginTracker-FailLoginAttemptsByUnknownUsers:
+            name: ExtendmateLoginTracker-FailLoginAttemptsByUnknownUsers
+            sql: ''
+            dataSourceConfig:
+                -
+                    sql: ' id,username,ipAddress,userAgent,loginAt'
+                    from: bundle_extendmate_login_tracker_login_attempts
+                    where: 'userId IS NULL'
+                    groupby: ''
+                    type: sql
+            columnConfiguration:
+                -
+                    name: id
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Login Attempt ID'
+                    filter: numeric
+                    id: extModel716-1
+                -
+                    name: username
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: Username
+                    filter: string
+                    id: extModel716-2
+                -
+                    name: ipAddress
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'IP Address'
+                    filter: string
+                    id: extModel716-3
+                -
+                    name: loginAt
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Login At'
+                    filter: date
+                    displayType: date
+                    id: extModel716-4
+                -
+                    name: userAgent
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'User Agent'
+                    id: extModel716-5
+            niceName: 'Fail Login Attempts By Unknown Users'
+            group: 'Extendmate Login Tracker'
+            groupIconClass: ''
+            iconClass: ''
+            menuShortcut: true
+            reportClass: ''
+            chartType: ''
+            pieColumn: null
+            pieLabelColumn: null
+            xAxis: null
+            yAxis: {  }
+            modificationDate: 1701536328
+            creationDate: 1701448914
+            shareGlobally: true
+            sharedUserNames: {  }
+            sharedRoleNames: {  }

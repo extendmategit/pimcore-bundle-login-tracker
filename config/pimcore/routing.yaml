@@ -1,0 +1,7 @@
+extendmate_login_tracker:
+    resource: "@ExtendmateLoginTrackerBundle/src/Controller/Admin/"
+    type:     annotation
+    prefix:   /admin/extendmate-login-tracker/
+    options:
+      expose: true
+

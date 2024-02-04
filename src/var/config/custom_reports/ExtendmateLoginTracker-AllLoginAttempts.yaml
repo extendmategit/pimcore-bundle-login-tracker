@@ -1,0 +1,141 @@
+pimcore_custom_reports:
+    definitions:
+        ExtendmateLoginTracker-AllLoginAttempts:
+            name: ExtendmateLoginTracker-AllLoginAttempts
+            sql: ''
+            dataSourceConfig:
+                -
+                    sql: ' id,userId,username,roles,ipAddress,userAgent,loginAt,logoutAt,lastSeenAt,firewallName,status, isAdmin'
+                    from: bundle_extendmate_login_tracker_login_attempts
+                    where: ''
+                    groupby: ''
+                    type: sql
+            columnConfiguration:
+                -
+                    name: id
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Login Attempt ID'
+                    filter: numeric
+                    id: extModel395-1
+                -
+                    name: userId
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'User ID'
+                    filter: numeric
+                    id: extModel395-2
+                -
+                    name: username
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: Username
+                    filter: string
+                    id: extModel395-3
+                -
+                    name: roles
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: Roles
+                    filter: null
+                    id: extModel395-4
+                -
+                    name: ipAddress
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'IP Address'
+                    filter: string
+                    id: extModel395-5
+                -
+                    name: isAdmin
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Is Admin'
+                    filter: numeric
+                    displayType: null
+                    id: extModel395-6
+                -
+                    name: loginAt
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Login At'
+                    filter: date
+                    displayType: date
+                    columnAction: null
+                    id: extModel395-7
+                -
+                    name: logoutAt
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Logout At'
+                    filter: date
+                    displayType: date
+                    id: extModel395-8
+                -
+                    name: lastSeenAt
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Last Seen At'
+                    filter: date
+                    displayType: date
+                    id: extModel395-9
+                -
+                    name: userAgent
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'User Agent'
+                    id: extModel395-10
+                -
+                    name: firewallName
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: 'Firewall Name'
+                    filter: string
+                    id: extModel395-11
+                -
+                    name: status
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: Status
+                    filter: string
+                    id: extModel395-12
+            niceName: 'All Login Attempts'
+            group: 'Extendmate Login Tracker'
+            groupIconClass: ''
+            iconClass: ''
+            menuShortcut: true
+            reportClass: ''
+            chartType: ''
+            pieColumn: null
+            pieLabelColumn: null
+            xAxis: null
+            yAxis: {  }
+            modificationDate: 1701536220
+            creationDate: 1701448914
+            shareGlobally: true
+            sharedUserNames: {  }
+            sharedRoleNames: {  }

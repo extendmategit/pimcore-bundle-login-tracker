@@ -1,0 +1,42 @@
+{
+  "name": "extendmate/pimcore-bundle-login-tracker",
+  "license": "GPL-3.0+",
+  "type": "pimcore-bundle",
+  "description": "Tracks login activities of pimcore users.",
+  "keywords": [
+    "user login history",
+    "login history",
+    "login tracker",
+    "login log",
+    "login attempt detector",
+    "security audit trail",
+    "login monitor",
+    "login insights"
+  ],
+  "homepage": "https://extendmate.com",
+  "authors": [
+    {
+      "name": "Faiyaz Alam",
+      "role": "Developer",
+      "homepage": "https://www.linkedin.com/in/erfaiyazalam/"
+    }
+  ],
+  "support": {
+    "donate": "https://www.paypal.com/paypalme/erfaiyazalam/"
+  },
+  "autoload": {
+    "psr-4": {
+      "Extendmate\\Pimcore\\LoginTracker\\": "src/"
+    }
+  },
+  "require": {
+    "pimcore/pimcore": "^11.0.0"
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "Extendmate\\Pimcore\\LoginTracker\\ExtendmateLoginTrackerBundle"
+      ]
+    }
+  }
+}
